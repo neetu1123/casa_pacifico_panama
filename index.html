@@ -381,9 +381,10 @@
         }
 
         .property-bg {
-            background: url('bb81617ffbfe4fe194507abaa144215e-Medium.jpeg') center/cover no-repeat;
+            background: url('e639fda3ec544dd5a3c8c198152a35b3-Medium.jpeg') center/cover no-repeat;
             height: 500px;
             position: relative;
+            object-fit: cover;
         }
 
         .property-overlay {
@@ -619,7 +620,7 @@
 }
 
 .review-icon {
-    color: var(--highlight-bg);
+    color: var(--text-color);
     font-size: 1.5rem;
     margin-right: 15px;
 }
@@ -693,9 +694,9 @@
 }
 
 .review-nav-btn:hover {
-    background-color: var(--bright-green);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background-color: var(--text-color);
+    /* transform: translateY(-3px); */
+    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); */
 }
 
 .prev-btn {
@@ -845,7 +846,7 @@
             font-size: 3.5rem;
             font-weight: 800;
             margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
             position: relative;
         }
         
@@ -1084,22 +1085,22 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 about-content" data-aos="fade-right" data-aos-duration="1000">
-                    <h1 class="about-title">A Luxury Mountain<br>Retreat in Durango</h1>
+                    <h1 class="about-title">Entire rental unit in Las Lajas<br>Panama</h1>
                     <div class="about-underline"></div>
                     <p class="about-text">
                         Immerse yourself in the breathtaking ambiance of the beautiful swimming pool, just steps away from the pristine beach. Indulge in the convenience of a BYOB bar and a full bathroom in the bohio, creating an idyllic setting for relaxation. Enhance your seaside experience with an outdoor shower, allowing you to wash off the sand after a day of sun-soaked adventures. Welcome to your coastal haven where tranquility meets opulence.
 
 
                     <p class="about-text">
-                       Immerse yourself in the breathtaking ambiance of the beautiful swimming pool, just steps away from the pristine beach. Indulge in the convenience of a BYOB bar and a full bathroom in the bohio, creating an idyllic setting for relaxation. Enhance your seaside experience with an outdoor shower, allowing you to wash off the sand after a day of sun-soaked adventures. Welcome to your coastal haven where tranquility meets opulence.
+                       Immerse yourself in the breathtaking ambiance of the beautiful swimming pool,
 
 
                     </p>
                     <a href="#" class="btn main-btn btn-lg px-4 py-2 mt-3 rounded-pill">Learn More</a>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" style="width: 50%; height: 100%;">
                         <img src="cb38ea09eb774e538f2ebb0f444383ad-Medium.jpeg" 
-                            alt="Luxury Mountain Home" class="image-fluid" style="height: 100%;">
+                            alt="Luxury Mountain Home" class="image-fluid" style="height: 100%; object-fit: cover;">
                         <!-- <div class="position-absolute bottom-0 end-0 bg-white p-3 rounded-3 shadow-lg m-4">
                             <div class="d-flex align-items-center">
                                 <span class="iconify me-2" data-icon="bi:star-fill" style="color: var(--bright-green); font-size: 1.5rem;"></span>
@@ -1169,7 +1170,7 @@
                 <h2 class="fw-bold mb-3" style=" font-size: 2.8rem;">
                   Premium Features
                 </h2>
-                <p class="lead" style="color: var(--accent-blue)">
+                <p class="lead">
                   Explore the Epitome of Coastal Luxury at Casa Pacifico Panama's Oceanfront Home
                 </p>
               </div>
