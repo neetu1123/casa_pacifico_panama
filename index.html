@@ -84,7 +84,7 @@
     background-size: cover;
     background-position: center;
     /* background-attachment: fixed; */
-    height: 90vh;
+    height: 88vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -299,6 +299,8 @@
             color: black;
             position: relative;
             overflow: hidden;
+            background-color: #555555;
+            /* padding: rem; */
         }
 
         .about-section::before {
@@ -315,6 +317,8 @@
         .about-content {
             position: relative;
             z-index: 2;
+            color: var(--text-light);
+            /* margin: 0 6rem; */
         }
 
         .about-title {
@@ -323,6 +327,7 @@
             line-height: 1.2;
             margin-bottom: 2rem;
             letter-spacing: 1px;
+            color: var(--text-light);
         }
 
         .about-underline {
@@ -330,6 +335,7 @@
             height: 2px;
             background: #d4af37;
             margin: 2rem 0;
+            color: var(--text-light);
         }
 
         .about-text {
@@ -382,7 +388,7 @@
 
         .property-bg {
             background: url('e639fda3ec544dd5a3c8c198152a35b3-Medium.jpeg') center/cover no-repeat;
-            height: 500px;
+            height: 600px;
             position: relative;
             object-fit: cover;
         }
@@ -520,13 +526,13 @@
 .reviews-section {
     position: relative;
     /* padding: 100px 0; */
-    color: var(--text-color);
+    color: var(--text-light);
     overflow: hidden;
     z-index: 1;
     height: 600px;
     width: 100%;
     min-height: 500px ;
-    background-image: linear-gradient(135deg, var(--light-blue) 0%, var(--backgroundColor) 100%);
+    background-image: #555555;
 }
 
 .reviews-section::before {
@@ -536,7 +542,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #555555;
     background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMDAwMDAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIG9wYWNpdHk9IjAuMDMiPjxwYXRoIGQ9Ik0wIDIwQzAgOC45NTQzMDUgOC45NTQzMDUgMCAyMCAwYzExLjA0NTY5NSAwIDIwIDguOTU0MzA1IDIwIDIwIDAgMTEuMDQ1Njk1LTguOTU0MzA1IDIwLTIwIDIwQzguOTU0MzA1IDQwIDAgMzEuMDQ1Njk1IDAgMjB6Ii8+PHBhdGggZD0iTTAgMEMyMCAwIDQwIDIwIDQwIDQwSDIwVjIwSDBWMHoiLz48L2c+PC9zdmc+');
     background-repeat: repeat;
     background-size: 30px 30px;
@@ -546,7 +552,7 @@
 .reviews-title {
     text-align: center;
     font-size: 2.5rem;
-    color: var(--text-color);
+    color: var(--text-light);
     margin-bottom: 50px;
     font-weight: 600;
     position: relative;
@@ -562,7 +568,7 @@
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background: var(--bright-green);
+    background: var(--gold);
     border-radius: 3px;
 }
 
@@ -620,7 +626,7 @@
 }
 
 .review-icon {
-    color: var(--text-color);
+    color: var(--text-light);
     font-size: 1.5rem;
     margin-right: 15px;
 }
@@ -628,7 +634,7 @@
 .review-title {
     font-size: 1.3rem;
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--text-light);
 }
 
 .stars {
@@ -641,7 +647,7 @@
 }
 
 .review-date {
-    color: var(--text-color);
+    color: var(--text-light);
     font-size: 0.9rem;
     margin-bottom: 0;
     text-transform: uppercase;
@@ -650,7 +656,7 @@
 
 .review-text {
     line-height: 1.8;
-    color: var(--text-color);
+    color: var(--text-light);
     font-style: italic;
     font-size: 1.1rem;
     position: relative;
@@ -678,9 +684,9 @@
 }
 
 .review-nav-btn {
-    background:var(--text-color);
+    background:var(--text-light);
     border: none;
-    color: var(--white);
+    color: var(--text-color);
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -694,7 +700,7 @@
 }
 
 .review-nav-btn:hover {
-    background-color: var(--text-color);
+    background-color: var(--text-light);
     /* transform: translateY(-3px); */
     /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); */
 }
@@ -1053,14 +1059,14 @@
             background-color: transparent;
         }
         .certification-img {
-            width: 280px;
-            height: 100px;
+            width: 200px;
+            height: auto;
             object-fit: contain;
             transition: transform 0.3s ease;
             padding: 10px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            /* background-color: white; */
+            /* border-radius: 10px; */
+            /* box-shadow: 0 5px 15px rgba(0,0,0,0.08); */
         }
         .certification-img:hover {
             transform: scale(1.05);
@@ -1108,15 +1114,20 @@
          </div>
       </div>
     </section>
+    <!-- Curved Divider for CTA Section -->
+    <main class="section-bg">
+        <div class="cta-divider-block">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:180px;">
+                <path d="M0,0 C240,80 480,120 720,100 C960,80 1200,40 1440,60 L1440,120 L0,120 Z" fill="#555"/>
+            </svg>
+        </div>
 
 
     <!-- Main Content -->
-    <main class="py-5 section-bg">
-      <div class="container">
-       
+    
+    <section class="about-section py-5">
        <!-- About Section -->
-    <section class="about-section my-5 py-2">
-        <div class="container">
+        <div class="container" style="padding: 4rem 0;">
             <div class="row g-5">
                 <div class="col-lg-6 about-content" data-aos="fade-right" data-aos-duration="1000">
                     <h1 class="about-title">Home of the World's Largest <br> Wave Pool</h1>
@@ -1130,9 +1141,9 @@
 
 
                     </p>
-                    <a href="#" class="btn main-btn btn-lg px-4 py-2 mt-3 rounded-pill">Learn More</a>
+                    <a href="#" class="btn main-btn btn-lg px-4 py-2 my-3 rounded-pill">Learn More</a>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" style="width: 50%; height: 100%;">
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" style="width: 50%; ">
                         <img src="cb38ea09eb774e538f2ebb0f444383ad-Medium.jpeg" 
                             alt="Luxury Mountain Home" class="image-fluid" style="height: 100%; object-fit: cover;">
                        
@@ -1179,7 +1190,7 @@
                            Explore the Epitome of Coastal Luxury at Casa Pacifico Panama's Oceanfront Home
                         </p>
                         
-                        <a href="#" class="book-now-btn">BOOK NOW</a>
+                        <a href="#" class="btn main-btn btn-lg px-5 py-3 mt-3 rounded-pill">BOOK NOW</a>
                     </div>
                 </div>
             </div>
@@ -1192,16 +1203,16 @@
     <div class="container">
       <!-- <h2 class="text-center mb-4 fw-bold">Our Certifications</h2> -->
       <div class="d-flex justify-content-center align-items-center flex-wrap gap-4">
-        <img src="WhatsApp Image 2025-08-13 at 10.00.03 PM (1).jpeg" alt="Certification Badge" class="certification-img">
-        <img src="WhatsApp Image 2025-08-13 at 10.00.03 PM (2).jpeg" alt="Certification Badge" class="certification-img">
-        <img src="WhatsApp Image 2025-08-13 at 10.00.03 PM.jpeg" alt="Certification Badge" class="certification-img">
+        <img src="WhatsApp_Image_2025-08-13_at_10.00.03_PM__1_-removebg-preview.png" alt="Certification Badge" class="certification-img">
+        <img src="WhatsApp_Image_2025-08-13_at_10.00.03_PM__2_-removebg-preview.png" alt="Certification Badge" class="certification-img">
+        <img src="WhatsApp_Image_2025-08-13_at_10.00.03_PM-removebg-preview.png" alt="Certification Badge" class="certification-img">
       </div>
     </div>
   </section>
 
         <!-- Features Section -->
-        <section class="features-section py-5 my-5 rounded-4">
-          <div class="container py-3">
+        <section class="features-section py-5 rounded-4">
+          <div class="container" style="padding: 6rem 0;">
             <div class="row justify-content-center mb-5">
               <div class="col-lg-8 col-md-10 text-center">
                 <h2 class="fw-bold mb-3" style=" font-size: 2.8rem;">
