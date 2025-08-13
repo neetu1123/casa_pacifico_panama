@@ -18,13 +18,15 @@
 
       <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dynalight&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dynalight&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <!-- Theme Colors -->
     <style>
+        .container {
+            max-width: 1600px;
+            margin: auto;
+        }
       :root {
         --deep-blue: #07009c;
         --bright-green: #39c12c;
@@ -34,19 +36,21 @@
         --light-green: #dfffd6;
         --white: #ffffff;
         --black: #000000;
-        --backgroundColor: #f5f5f7;
+        --backgroundColor: #e5e3dc;
         --gold: #d4af37;
         --text-light: #ffffff;
+        --text-color: #495A5B;
         --secondary-light: #e6e6e6;
         --secondary-dark: #333333;
         --highlight-bg: #1a2a3c;
         --grey-light: #f0f0f0;
-        --grey-mid: #cccccc
+        --grey-mid: #cccccc;
+        --btn-color: #d4967d
       }
       
       /* Global Styling */
       body {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Nunito Sans';
         background: var(--backgroundColor);
         color: var(--black);
         line-height: 1.6;
@@ -56,24 +60,31 @@
         background: var(--light-blue);
         color: var(--black);
       }
+      h1, h2, h3, h4, h5, h6 {
+  font-family: "Sansita";
+  font-weight: 700;
+  font-style: normal;
+  color: var(--text-color);
+}
+
       .main-header {
-        background: var(--deep-blue);
+        background: var(--backgroundColor);
         color: var(--white);
       }
       .main-btn {
-        background: var(--bright-green);
+        background: var(--btn-color);
         color: var(--white);
       }
       .main-btn:hover {
-        background: var(--accent-green);
-        color: var(--deep-blue);
+          background: var(--btn-color);
+        color: var(--white);
       }
       .banner-section {
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('1212_County_Road_201_Durango_CO_81301-Exterior-A7300510-1024x683.jpg.webp');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('e639fda3ec544dd5a3c8c198152a35b3-Medium.jpeg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    height: 100vh;
+    /* background-attachment: fixed; */
+    height: 90vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -95,7 +106,7 @@
     bottom: 0;
     background: linear-gradient(135deg, rgba(7, 0, 156, 0.5) 0%, rgba(57, 193, 44, 0.3) 100%);
     z-index: 0;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .banner-content {
@@ -104,13 +115,13 @@
     width: 100%;
     margin-top: 0;
     padding: 0 20px;
-    animation: fadeIn 1.5s ease-out;
+    /* animation: fadeIn 1.5s ease-out; */
 }
-
+/* 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
-}
+} */
 
 .banner-content h5 {
     letter-spacing: 0.15em;
@@ -126,7 +137,6 @@
 }
 
 .banner-content h1 {
-    font-family: 'Playfair Display', serif;
     font-size: 3.2rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
@@ -160,7 +170,7 @@
         height: auto;
         min-height: 650px;
         padding: 100px 0;
-        background-attachment: scroll;
+        /* background-attachment: scroll; */
     }
 }
 
@@ -197,22 +207,22 @@
         border: 1px solid var(--accent-blue);
         box-shadow: 0 2px 8px rgba(7, 0, 156, 0.08);
       }
-      .card-title {
+      /* .card-title {
         color: var(--deep-blue);
-      }
+      } */
       .highlight {
         color: var(--bright-green);
       }
 
       /* Footer styling */
       .footer-section {
-        background-color: var(--deep-blue);
-        color: var(--white);
+        background-color: #555555;
+        color: var(--black);
       }
 
-      .footer-brand-name {
-        color: var(--white);
-      }
+      /* .footer-brand-name {
+        color: var(--deep-blue);
+      } */
 
       .footer-brand-dot {
         color: var(--bright-green);
@@ -225,13 +235,13 @@
       }
 
       .footer-link {
-        color: var(--white);
+        color: var(--light-blue);
         text-decoration: none;
         transition: color 0.3s;
       }
 
       .footer-link:hover {
-        color: var(--bright-green);
+        color: var(--accent-blue);
       }
 
       .footer-bottom {
@@ -283,7 +293,7 @@
       /* about Section */
         .about-section {
             /* background: linear-gradient(135deg, #1a3b4d 0%, #2c5f7a 100%); */
-            min-height: 100vh;
+            /* min-height: 100vh; */
             display: flex;
             align-items: center;
             color: black;
@@ -326,7 +336,6 @@
             font-size: 1.1rem;
             line-height: 1.8;
             margin-bottom: 2rem;
-            color: rgba(77, 33, 158, 0.9);
         }
 
         .mountain-image {
@@ -350,7 +359,6 @@
 
         .property-title {
             font-size: 3rem;
-            color: #2c5f7a;
             text-align: center;
             margin-bottom: 1rem;
             font-weight: 300;
@@ -373,7 +381,7 @@
         }
 
         .property-bg {
-            background: url('1212_County_Road_201_Durango_CO_81301-Exterior-A7300510-1024x683.jpg.webp') center/cover;
+            background: url('bb81617ffbfe4fe194507abaa144215e-Medium.jpeg') center/cover no-repeat;
             height: 500px;
             position: relative;
         }
@@ -400,6 +408,7 @@
             margin-bottom: 2rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             letter-spacing: 1px;
+            color: white;
         }
 
         .property-details {
@@ -509,11 +518,14 @@
       /* Reviews Section */
 .reviews-section {
     position: relative;
-    padding: 100px 0;
-    color: var(--text-light);
+    /* padding: 100px 0; */
+    color: var(--text-color);
     overflow: hidden;
     z-index: 1;
-    background-image: linear-gradient(135deg, var(--deep-blue) 0%, var(--accent-blue) 100%);
+    height: 600px;
+    width: 100%;
+    min-height: 500px ;
+    background-image: linear-gradient(135deg, var(--light-blue) 0%, var(--backgroundColor) 100%);
 }
 
 .reviews-section::before {
@@ -533,12 +545,12 @@
 .reviews-title {
     text-align: center;
     font-size: 2.5rem;
-    color: var(--white);
+    color: var(--text-color);
     margin-bottom: 50px;
     font-weight: 600;
-    font-family: 'Playfair Display', serif;
     position: relative;
     padding-bottom: 15px;
+    margin-top: 50px;
 }
 
 .reviews-title::after {
@@ -568,12 +580,12 @@
 .reviews-slide {
     width: 100%;
     opacity: 0;
-    visibility: hidden;
+    /* visibility: hidden; */
     position: absolute;
-    transition: all 0.8s ease;
-    left: 0;
-    top: 0;
-    height: 100%;
+    /* transition: all 0.8s ease; */
+    /* left: 0; */
+    /* top: 0; */
+    /* height: 100%; */
 }
 
 .reviews-slide.active {
@@ -584,21 +596,13 @@
 
 .review-card {
     padding: 40px;
-    border-radius: 16px;
+    
     margin: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     transition: all 0.4s ease;
     height: 100%;
 }
 
-.review-card:hover {
-    transform: translateY(-10px);
-    background-color: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
+
 
 .review-header {
     display: flex;
@@ -615,7 +619,7 @@
 }
 
 .review-icon {
-    color: var(--bright-green);
+    color: var(--highlight-bg);
     font-size: 1.5rem;
     margin-right: 15px;
 }
@@ -645,7 +649,7 @@
 
 .review-text {
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-color);
     font-style: italic;
     font-size: 1.1rem;
     position: relative;
@@ -729,7 +733,7 @@
 }
 
 .review-dot.active {
-    background: var(--bright-green);
+    background: var(--black);
     width: 15px;
     height: 15px;
     box-shadow: 0 0 10px var(--bright-green);
@@ -774,38 +778,23 @@
             position: relative;
             min-height: 600px;
             overflow: hidden;
-            background: linear-gradient(135deg, #1a2e3d 0%, #2d4a5f 50%, #1a2e3d 100%);
+            border: white;
+            background-color: var(--backgroundColor);
+            /* background: linear-gradient(135deg, #1a2e3d 0%, #2d4a5f 50%, #1a2e3d 100%) */
         }
+            .cta-divider-block {
+                position: absolute;
+                /* left: 0; */
+                bottom: 0;
+                width: 100%;
+                height: 150px;
+                z-index: 2;
+                overflow: hidden;
+                pointer-events: none;
+                transform-origin: left center;
+            }
+       
         
-        .cta-bg-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('images.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            opacity: 0.3;
-            z-index: 1;
-        }
-        
-        .cta-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                135deg, 
-                rgba(26, 46, 61, 0.9) 0%, 
-                rgba(4, 58, 102, 0.8) 30%,
-                rgba(218, 165, 32, 0.1) 70%,
-                rgba(26, 46, 61, 0.9) 100%
-            );
-            z-index: 2;
-        }
         
         .cta-content-wrapper {
             position: relative;
@@ -855,7 +844,6 @@
         .cta-title {
             font-size: 3.5rem;
             font-weight: 800;
-            color: white;
             margin-bottom: 1.5rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
             position: relative;
@@ -875,7 +863,6 @@
         
         .cta-subtitle {
             font-size: 1.3rem;
-            color: var(--secondary-light);
             margin-bottom: 2rem;
             line-height: 1.6;
             font-weight: 500;
@@ -885,6 +872,7 @@
             display: flex;
             justify-content: center;
             gap: 2rem;
+            margin-top: 3rem;
             margin-bottom: 3rem;
             flex-wrap: wrap;
         }
@@ -893,7 +881,6 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            color: white;
             font-weight: 500;
         }
         
@@ -1071,50 +1058,49 @@
 
  <!-- Banner Section -->
     <section class="banner-section">
-      <div class="banner-content container">
-        <h5 class="text-secondary-light mb-3">VA MOUNTAIN CABINS</h5>
-        <h1 class="text-primary-light mx-auto mb-4" style="max-width: 1200px">
-          WE CAN'T WAIT TO WELCOME YOU TO THE MOUNTAINS
+      <div class="banner-content ">
+        <!-- <h5 class="text-secondary-light mb-3">VA MOUNTAIN CABINS</h5> -->
+        <h1 class="text-primary-light mx-auto mb-4" style="color: var(--primary-light); max-width: 1200px">
+        Entire rental unit in Las Lajas, Panama
         </h1>
         <p class="text-accent mx-auto mb-5" style="max-width: 600px">
-          Discover a unique selection of beautiful vacation rentals in the
-          scenic Virginia Mountains.
+        Explore the Epitome of Coastal Luxury at Casa Pacifico Panama's Oceanfront Home
+
+
         </p>
-       
+         <div>
+            <button class="btn main-btn btn-lg px-5 py-3 mt-3 rounded-pill">Book Now</button>
+         </div>
       </div>
     </section>
 
 
     <!-- Main Content -->
     <main class="py-5 section-bg">
-      <div class="container pt-5">
+      <div class="container">
        
        <!-- About Section -->
-    <section class="about-section my-5 py-5">
+    <section class="about-section my-5 py-2">
         <div class="container">
-            <div class="row align-items-center g-5">
+            <div class="row g-5">
                 <div class="col-lg-6 about-content" data-aos="fade-right" data-aos-duration="1000">
-                    <span class="badge rounded-pill px-3 py-2 mb-3" style="background-color: var(--deep-blue); color: var(--white);">LUXURY EXPERIENCE</span>
                     <h1 class="about-title">A Luxury Mountain<br>Retreat in Durango</h1>
                     <div class="about-underline"></div>
                     <p class="about-text">
-                        Escape to Ridgeview Over the Animas, a stunning new mountain-modern 
-                        luxury home designed for unforgettable getaways. Perched on a secluded 
-                        six-acre hilltop, this breathtaking retreat offers unparalleled views of the 
-                        Animas River Valley and the San Juan Mountains.
-                    </p>
+                        Immerse yourself in the breathtaking ambiance of the beautiful swimming pool, just steps away from the pristine beach. Indulge in the convenience of a BYOB bar and a full bathroom in the bohio, creating an idyllic setting for relaxation. Enhance your seaside experience with an outdoor shower, allowing you to wash off the sand after a day of sun-soaked adventures. Welcome to your coastal haven where tranquility meets opulence.
+
+
                     <p class="about-text">
-                        Surrounded by nature yet just 15 minutes from historic downtown Durango 
-                        and Purgatory Ski Resort, it is the ideal destination for multifamily vacations, 
-                        wedding parties, corporate retreats, and outdoor enthusiasts.
+                       Immerse yourself in the breathtaking ambiance of the beautiful swimming pool, just steps away from the pristine beach. Indulge in the convenience of a BYOB bar and a full bathroom in the bohio, creating an idyllic setting for relaxation. Enhance your seaside experience with an outdoor shower, allowing you to wash off the sand after a day of sun-soaked adventures. Welcome to your coastal haven where tranquility meets opulence.
+
+
                     </p>
                     <a href="#" class="btn main-btn btn-lg px-4 py-2 mt-3 rounded-pill">Learn More</a>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="position-relative">
-                        <img src="Views-768x432.jpeg.webp" 
-                            alt="Luxury Mountain Home" class="mountain-image rounded-4 shadow">
-                        <div class="position-absolute bottom-0 end-0 bg-white p-3 rounded-3 shadow-lg m-4">
+                        <img src="cb38ea09eb774e538f2ebb0f444383ad-Medium.jpeg" 
+                            alt="Luxury Mountain Home" class="image-fluid" style="height: 100%;">
+                        <!-- <div class="position-absolute bottom-0 end-0 bg-white p-3 rounded-3 shadow-lg m-4">
                             <div class="d-flex align-items-center">
                                 <span class="iconify me-2" data-icon="bi:star-fill" style="color: var(--bright-green); font-size: 1.5rem;"></span>
                                 <div>
@@ -1122,26 +1108,26 @@
                                     <div class="small text-muted">Based on 45 reviews</div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </div> -->
                 </div>
             </div>
         </div>
     </section>
+       
 
  <!-- Property Section -->
     <section class="property-section py-5 my-5">
         <div class="container">
             <div class="text-center mb-5">
-                <h6 class="text-uppercase fw-bold" style="color: var(--bright-green); letter-spacing: 2px; margin-bottom: 10px;">Discover</h6>
-                <h2 class="property-title" style="color: var(--deep-blue); font-family: 'Playfair Display', serif; font-size: 2.8rem;">Our Premier Property</h2>
+                <h6 class="text-uppercase fw-bold" style="letter-spacing: 2px; margin-bottom: 10px;">Discover</h6>
+                <h2 class="property-title" style="font-size: 2.8rem;">Our Premier Property</h2>
                 <div class="property-underline mx-auto"></div>
             </div>
             
             <div class="property-hero rounded-4 overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-duration="800">
                 <div class="property-bg">
                     <div class="property-overlay">
-                        <h3 class="property-name">Ridgeview Over the Animas</h3>
+                        <h3 class="property-name"> Immerse yourself in the breathtakings</h3>
                         
                         <div class="property-details">
                             <div class="detail-item">
@@ -1163,9 +1149,7 @@
                         </div>
                         
                         <p class="property-description">
-                            SUMMER IS BOOKING UP! RESERVE YOUR DATES TODAY! Spectacular views and 
-                            luxury comfort. Perfect for families vacationing together. Teens will love the separate 
-                            apartment while adults enjoy the main house.
+                           Explore the Epitome of Coastal Luxury at Casa Pacifico Panama's Oceanfront Home
                         </p>
                         
                         <a href="#" class="book-now-btn">BOOK NOW</a>
@@ -1173,56 +1157,20 @@
                 </div>
             </div>
             
-            <!-- Property Highlights -->
-            <div class="row mt-5 g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 rounded-4 shadow-sm hover-lift">
-                        <div class="card-body text-center p-4">
-                            <div class="rounded-circle bg-light d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
-                                <i class="fas fa-mountain fs-1" style="color: var(--deep-blue);"></i>
-                            </div>
-                            <h4>Stunning Views</h4>
-                            <p class="text-muted">Panoramic mountain and river valley vistas from every room</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 rounded-4 shadow-sm hover-lift">
-                        <div class="card-body text-center p-4">
-                            <div class="rounded-circle bg-light d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
-                                <i class="fas fa-map-marker-alt fs-1" style="color: var(--deep-blue);"></i>
-                            </div>
-                            <h4>Prime Location</h4>
-                            <p class="text-muted">Just 15 minutes from downtown Durango and Purgatory Ski Resort</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 rounded-4 shadow-sm hover-lift">
-                        <div class="card-body text-center p-4">
-                            <div class="rounded-circle bg-light d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
-                                <i class="fas fa-home fs-1" style="color: var(--deep-blue);"></i>
-                            </div>
-                            <h4>Modern Luxury</h4>
-                            <p class="text-muted">Contemporary design with premium finishes and amenities</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </section>
 
         <!-- Features Section -->
-        <section class="features-section py-5 my-5 bg-light rounded-4">
+        <section class="features-section py-5 my-5 rounded-4">
           <div class="container py-3">
             <div class="row justify-content-center mb-5">
               <div class="col-lg-8 col-md-10 text-center">
-                <h6 class="text-uppercase fw-bold" style="color: var(--bright-green); letter-spacing: 2px;">Amenities</h6>
-                <h2 class="fw-bold mb-3" style="color: var(--deep-blue); font-family: 'Playfair Display', serif; font-size: 2.8rem;">
+                <h2 class="fw-bold mb-3" style=" font-size: 2.8rem;">
                   Premium Features
                 </h2>
                 <p class="lead" style="color: var(--accent-blue)">
-                  Experience the ultimate comfort with our carefully selected amenities
+                  Explore the Epitome of Coastal Luxury at Casa Pacifico Panama's Oceanfront Home
                 </p>
               </div>
             </div>
@@ -1293,12 +1241,13 @@
               </div>
             </div>
             
-            <div class="text-center mt-5">
+            <!-- <div class="text-center mt-5">
               <a href="#" class="btn main-btn btn-lg px-5 py-3 rounded-pill fw-bold">View All Amenities</a>
-            </div>
+            </div> -->
           </div>
         </section>
-
+ </div>
+</main>
             <!-- Reviews Section -->
     <section class="reviews-section">
         <div class="container">
@@ -1428,15 +1377,12 @@
         </div>
     </section>
 
-  </div>
-</main>
+
         <!-- Enhanced Call to Action Section -->
     <section class="enhanced-cta-section">
         <!-- Background Image -->
-        <div class="cta-bg-image"></div>
         
         <!-- Overlay -->
-        <div class="cta-overlay"></div>
         
     
         
@@ -1449,21 +1395,19 @@
                           
                             
                             <!-- Main Badge -->
-                            <div class="cta-badge">
-                                ✨ Premium Mountain Experience
-                            </div>
+                          
                             
                             <!-- Title -->
                             <h2 class="cta-title">
-                                Your Perfect Mountain Escape Awaits
+                              Ready to Book your stay in Paradise?
                             </h2>
                             
                             <!-- Subtitle -->
-                            <p class="cta-subtitle">
+                            <!-- <p class="cta-subtitle">
                                 Discover luxury cabins nestled in Virginia's breathtaking mountains. 
                                 Create unforgettable memories with stunning views, modern amenities, and unparalleled comfort.
                             </p>
-                            
+                             -->
                             <!-- Features -->
                             <div class="cta-features">
                                 <div class="feature-item">
@@ -1486,9 +1430,9 @@
                             
                             <!-- Buttons -->
                             <div class="cta-buttons">
-                                <a href="#" class="btn btn-primary-custom d-inline-flex align-items-center gap-2">
+                                <a href="#" class="btn main-btn btn-lg px-5 py-3 mt-3 rounded-pill d-inline-flex align-items-center gap-2">
                                     <span class="iconify" data-icon="mdi:cabin"></span>
-                                    Browse Cabins
+                                    Book Now
                                 </a>
                               
                             </div>
@@ -1496,6 +1440,12 @@
                     </div>
                 </div>
             </div>
+        </div>
+         <!-- Curved Divider for CTA Section -->
+        <div class="cta-divider-block">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:180px;">
+                <path d="M0,0 C240,80 480,120 720,100 C960,80 1200,40 1440,60 L1440,120 L0,120 Z" fill="#555"/>
+            </svg>
         </div>
     </section>
     
