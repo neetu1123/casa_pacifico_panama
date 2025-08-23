@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Special Offer - Casa Pacífico Panama</title>
+    <!-- Bootstrap CSS and Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dynalight&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <!-- Theme Colors -->
+    <style>
+      :root {
+        --deep-blue: #07009c;
+        --bright-green: #39c12c;
+        --accent-blue: #1a1a80;
+        --light-blue: #e6e8ff;
+        --accent-green: #6fea4b;
+        --light-green: #dfffd6;
+        --white: #ffffff;
+        --black: #000000;
+        --backgroundColor: #e5e3dc;
+        --gold: #d4af37;
+        --text-light: #ffffff;
+        --text-color: #495a5b;
+        --secondary-light: #e6e6e6;
+        --secondary-dark: #333333;
+        --highlight-bg: #1a2a3c;
+        --grey-light: #f0f0f0;
+        --grey-mid: #cccccc;
+        --btn-color: #d4967d;
+      }
+
+      .container {
+        max-width: 1600px;
+        margin: auto;
+      }
+
+      /* Global Styling */
+      body {
+        font-family: "Nunito Sans";
+        background: var(--backgroundColor);
+        color: var(--black);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Sansita";
+        font-weight: 700;
+        font-style: normal;
+        color: var(--text-color);
+      }
+
+      .main-header {
+        background: var(--backgroundColor);
+        color: var(--white);
+      }
+
+      /* Special Offer Page Styles */
+      .special-offer-header {
+      
+        background-color: var(--btn-color);
+        padding: 80px 0;
+        text-align: center;
+        color: white;
+        position: relative;
+      }
+
+      .special-offer-header h1 {
+        font-size: 2.8rem;
+        font-weight: 800;
+        color: white;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .special-offer-header p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      }
+
+      /* How It Works Section */
+      .how-it-works {
+        padding: 70px 0;
+      }
+
+      .how-it-works h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+      }
+
+      .step-card {
+        text-align: center;
+        padding: 30px 15px;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        height: 100%;
+        background-color: var(--white);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .step-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .step-icon {
+        width: 80px;
+        height: 80px;
+        background-color: rgba(212, 150, 125, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 2rem;
+        color: var(--btn-color);
+      }
+
+      .step-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: var(--text-color);
+      }
+
+      .step-card p {
+        color: var(--text-color);
+        font-size: 1rem;
+      }
+
+      /* Form Section */
+      .form-section {
+        padding: 70px 0;
+        background-color: var(--backgroundColor);
+      }
+
+      .form-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-header {
+        background-color: var(--btn-color);
+        color: white;
+        padding: 25px;
+        text-align: center;
+      }
+
+      .form-header h3 {
+        margin: 0;
+        font-size: 1.8rem;
+        color: white;
+      }
+
+      .form-body {
+        padding: 35px;
+      }
+
+      .form-group {
+        margin-bottom: 25px;
+      }
+
+      .form-label {
+        font-weight: 600;
+        margin-bottom: 8px;
+        display: block;
+        color: var(--text-color);
+      }
+
+      .form-control {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 12px 15px;
+        height: auto;
+        font-size: 1rem;
+      }
+
+      .form-control:focus {
+        box-shadow: 0 0 0 3px rgba(212, 150, 125, 0.25);
+        border-color: var(--btn-color);
+      }
+
+      .btn-claim {
+        background: var(--btn-color);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        padding: 15px 35px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        display: block;
+        width: 100%;
+        margin-top: 15px;
+      }
+
+      .btn-claim:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(212, 150, 125, 0.3);
+        background-color: #c68268;
+        color: white;
+      }
+
+      /* Custom checkbox */
+      .custom-checkbox {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 20px;
+      }
+
+      .custom-checkbox input {
+        margin-top: 5px;
+        margin-right: 10px;
+      }
+
+      .custom-checkbox label {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        color: var(--text-color);
+      }
+
+      /* Date picker styling */
+      input[type="date"] {
+        cursor: pointer;
+      }
+
+      /* Responsive styles */
+      @media (max-width: 991px) {
+        .special-offer-header h1 {
+          font-size: 2.4rem;
+        }
+
+        .form-body {
+          padding: 30px 25px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .special-offer-header {
+          padding: 60px 0;
+        }
+
+        .special-offer-header h1 {
+          font-size: 2rem;
+        }
+
+        .special-offer-header p {
+          font-size: 1rem;
+        }
+
+        .how-it-works {
+          padding: 50px 0;
+        }
+
+        .how-it-works h2 {
+          font-size: 2rem;
+          margin-bottom: 30px;
+        }
+
+        .step-card {
+          margin-bottom: 30px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .special-offer-header h1 {
+          font-size: 1.8rem;
+        }
+
+        .form-header h3 {
+          font-size: 1.5rem;
+        }
+
+        .form-body {
+          padding: 20px;
+        }
+
+        .btn-claim {
+          padding: 12px 25px;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div id="header-container"></div>
+    <script>
+      // Load header
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("header-container").innerHTML = html;
+        })
+        .catch((error) => {
+          console.error("Error loading header:", error);
+          document.getElementById("header-container").innerHTML =
+            "<p>Error loading header</p>";
+        });
+    </script>
+
+    <!-- Special Offer Header Section -->
+    <section class="special-offer-header">
+      <div class="container">
+        <h1>Book Now & Save 10% – Secure Your Stay with Just $200!</h1>
+        <p>
+          Lock in your discount with a non-refundable deposit. Limited-time
+          offer.
+        </p>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="step-card">
+              <div class="step-icon">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <h3>Step 1</h3>
+              <p>Fill out the form & submit request.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="step-card">
+              <div class="step-icon">
+                <i class="fas fa-wallet"></i>
+              </div>
+              <h3>Step 2</h3>
+              <p>Send $200 deposit via PayPal/Zelle.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="step-card">
+              <div class="step-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h3>Step 3</h3>
+              <p>Receive confirmation & save 10% on your stay.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="form-card">
+              <div class="form-header">
+                <h3>Special Discount Booking</h3>
+              </div>
+              <div class="form-body">
+                <form id="special-offer-form">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="fullName" class="form-label"
+                          >Full Name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="fullName"
+                          placeholder="Enter your full name"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="email" class="form-label"
+                          >Email Address</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          placeholder="Enter your email"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="phone" class="form-label"
+                          >Phone Number (optional)</label
+                        >
+                        <input
+                          type="tel"
+                          class="form-control"
+                          id="phone"
+                          placeholder="Enter your phone number"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="checkIn" class="form-label"
+                          >Check-in Date</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          id="checkIn"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="checkOut" class="form-label"
+                          >Check-out Date</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          id="checkOut"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="guests" class="form-label"
+                          >Number of Guests</label
+                        >
+                        <select class="form-control" id="guests" required>
+                          <option value="">Select number of guests</option>
+                          <option value="1">1 Guest</option>
+                          <option value="2">2 Guests</option>
+                          <option value="3">3 Guests</option>
+                          <option value="4">4 Guests</option>
+                          <option value="5">5 Guests</option>
+                          <option value="6">6+ Guests</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="paymentMethod" class="form-label"
+                          >Preferred Payment Method</label
+                        >
+                        <select
+                          class="form-control"
+                          id="paymentMethod"
+                          required
+                        >
+                          <option value="">Select payment method</option>
+                          <option value="PayPal">PayPal</option>
+                          <option value="Zelle">Zelle</option>
+                          <option value="Other">Other</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="specialRequests" class="form-label"
+                          >Special Requests/Notes</label
+                        >
+                        <textarea
+                          class="form-control"
+                          id="specialRequests"
+                          rows="3"
+                          placeholder="Any special requests or notes for your stay?"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="custom-checkbox">
+                        <input type="checkbox" id="acknowledgment" required />
+                        <label for="acknowledgment">
+                          I understand this booking requires a $200
+                          non-refundable deposit to secure the 10% discount.
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <button type="submit" class="btn btn-claim">
+                        Claim My Discount
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    <script>
+      // Load footer
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("footer-container").innerHTML = html;
+        })
+        .catch((error) => {
+          console.error("Error loading footer:", error);
+          document.getElementById("footer-container").innerHTML =
+            "<p>Error loading footer</p>";
+        });
+    </script>
+
+    <!-- Bootstrap JS and Iconify -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    <!-- Form validation script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("special-offer-form");
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Get form values
+          const formData = {
+            name: document.getElementById("fullName").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            checkIn: document.getElementById("checkIn").value,
+            checkOut: document.getElementById("checkOut").value,
+            guests: document.getElementById("guests").value,
+            paymentMethod: document.getElementById("paymentMethod").value,
+            specialRequests: document.getElementById("specialRequests").value,
+            acknowledgment: document.getElementById("acknowledgment").checked,
+          };
+
+          // Simple validation
+          if (!formData.acknowledgment) {
+            alert("Please acknowledge the deposit requirement to proceed.");
+            return;
+          }
+
+          // Here you would typically send the data to your server
+          alert(
+            "Thank you for your request! We will contact you shortly with instructions for your deposit payment."
+          );
+
+          // Reset the form
+          form.reset();
+        });
+
+        // Set minimum dates for the date pickers
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+
+        const formatDate = (date) => {
+          const year = date.getFullYear();
+          const month = String(date.getMonth() + 1).padStart(2, "0");
+          const day = String(date.getDate()).padStart(2, "0");
+          return `${year}-${month}-${day}`;
+        };
+
+        document.getElementById("checkIn").min = formatDate(today);
+        document.getElementById("checkOut").min = formatDate(tomorrow);
+
+        // Ensure checkout date is after checkin date
+        document
+          .getElementById("checkIn")
+          .addEventListener("change", function () {
+            const checkInDate = new Date(this.value);
+            const nextDay = new Date(checkInDate);
+            nextDay.setDate(nextDay.getDate() + 1);
+            document.getElementById("checkOut").min = formatDate(nextDay);
+
+            // Reset checkout date if it's before the new minimum
+            const checkOutInput = document.getElementById("checkOut");
+            const checkOutDate = new Date(checkOutInput.value);
+            if (checkOutDate <= checkInDate) {
+              checkOutInput.value = formatDate(nextDay);
+            }
+          });
+      });
+    </script>
+  </body>
+</html>
